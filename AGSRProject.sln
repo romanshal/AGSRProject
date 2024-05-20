@@ -3,13 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.33424.131
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AGSRProject", "AGSRProject\AGSRProject.csproj", "{65838553-A159-4B03-BA03-0C4B285F5C40}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AGSRProject", "AGSRProject\AGSRProject.csproj", "{65838553-A159-4B03-BA03-0C4B285F5C40}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AGSRProject.Common", "AGSRProject.Common\AGSRProject.Common.csproj", "{93742ED1-EC9C-4F2A-9701-3921B452F0AD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AGSRProject.Common", "AGSRProject.Common\AGSRProject.Common.csproj", "{93742ED1-EC9C-4F2A-9701-3921B452F0AD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AGSRProject.DataAccess", "AGSRProject.DataAccess\AGSRProject.DataAccess.csproj", "{8F66FCCA-0DBA-4137-9CB4-33542937F5EB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AGSRProject.DataAccess", "AGSRProject.DataAccess\AGSRProject.DataAccess.csproj", "{8F66FCCA-0DBA-4137-9CB4-33542937F5EB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AGSRProject.BusinessLogic", "AGSRProject.BusinessLogic\AGSRProject.BusinessLogic.csproj", "{4E9CDDA9-102B-4B7C-8F60-7CB65F441D15}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AGSRProject.BusinessLogic", "AGSRProject.BusinessLogic\AGSRProject.BusinessLogic.csproj", "{4E9CDDA9-102B-4B7C-8F60-7CB65F441D15}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AGSRProject.ConsoleApp", "AGSRProject.ConsoleApp\AGSRProject.ConsoleApp.csproj", "{6D0B1FAE-E458-4E57-945E-0CB7F1F2A163}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{4E9CDDA9-102B-4B7C-8F60-7CB65F441D15}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4E9CDDA9-102B-4B7C-8F60-7CB65F441D15}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4E9CDDA9-102B-4B7C-8F60-7CB65F441D15}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6D0B1FAE-E458-4E57-945E-0CB7F1F2A163}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6D0B1FAE-E458-4E57-945E-0CB7F1F2A163}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6D0B1FAE-E458-4E57-945E-0CB7F1F2A163}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6D0B1FAE-E458-4E57-945E-0CB7F1F2A163}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

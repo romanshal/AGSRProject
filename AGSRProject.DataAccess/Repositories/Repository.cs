@@ -1,13 +1,7 @@
 ﻿using AGSRProject.Common.Interfaces.Repositories;
+using AGSRProject.Common.Models.Entities;
 using AGSRProject.DataAccess.Contexts;
-using AGSRProject.DataAccess.Entities;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Linq.Expressions;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace AGSRProject.DataAccess.Repositories
 {
@@ -40,7 +34,7 @@ namespace AGSRProject.DataAccess.Repositories
             return await _dbSet.ToListAsync().ConfigureAwait(false);
         }
 
-        public virtual async Task<T> AddAsync(T entity)
+        public virtual async Task<string> AddAsync(T entity)
         {
             if (entity == null)
             {
@@ -50,10 +44,10 @@ namespace AGSRProject.DataAccess.Repositories
             var result = await _dbSet.AddAsync(entity);
             var numberOfChanges = await _context.SaveChangesAsync().ConfigureAwait(false);
 
-            return entity;
+            return entity.Id;
         }
 
-        public virtual async Task<T> UpdateAsync(T entity)
+        public virtual async Task<string> UpdateAsync(T entity)
         {
             if (entity == null)
             {
@@ -63,28 +57,10 @@ namespace AGSRProject.DataAccess.Repositories
             var result = _context.Entry(entity).State = EntityState.Modified;
             var numberOfChanges = await _context.SaveChangesAsync().ConfigureAwait(false);
 
-            return entity;
+            return entity.Id;
         }
 
-        public virtual async Task<T?> DeleteAsync(T entity)
-        {
-            if (entity == null)
-            {
-                throw new ArgumentNullException(nameof(entity));
-            }
-
-            var result = _context.Entry(entity).State = EntityState.Deleted;
-            var numberOfChanges = await _context.SaveChangesAsync().ConfigureAwait(false);
-
-            if (numberOfChanges > 0)
-            {
-                return entity;
-            }
-
-            return null;
-        }
-
-        public virtual async Task<T?> DeleteAsync(string id)
+        public virtual async Task<string> DeleteAsync(string id)
         {
             if (string.IsNullOrEmpty(id))
             {
@@ -103,20 +79,10 @@ namespace AGSRProject.DataAccess.Repositories
 
             if (numberOfChanges > 0)
             {
-                return entity;
+                return entity.Id;
             }
 
             return null;
-        }
-
-        public virtual async Task<IEnumerable<T>> FindAsync(Expression<Func<T, bool>> filter)
-        {
-            if (filter == null)
-            {
-                throw new ArgumentNullException(nameof(filter));
-            }
-
-            return await _dbSet.AsNoTracking().Where(filter).ToListAsync().ConfigureAwait(false);
         }
 
         public void Dispose()

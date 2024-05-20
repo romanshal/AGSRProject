@@ -1,6 +1,7 @@
 ﻿using AGSRProject.BusinessLogic.Services;
 using AGSRProject.Common.Interfaces.Services;
-using AGSRProject.DataAccess.Entities;
+using AGSRProject.Common.Models.Dto;
+using AGSRProject.Common.Models.Entities;
 
 namespace AGSRProject.Extensions
 {
@@ -8,8 +9,9 @@ namespace AGSRProject.Extensions
     {
         public static IServiceCollection ConfigureBusinessLogic(this IServiceCollection services) 
         {
+            services.AddTransient<IService<Entity, ModelDto>, Service<Entity, ModelDto>>();
+            services.AddTransient<IPatientService, PatientService>();
 
-            services.AddTransient<IService<Entity>, Service<Entity>>();
             return services; 
         }
     }

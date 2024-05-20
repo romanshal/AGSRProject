@@ -1,0 +1,138 @@
+{
+	"info": {
+		"_postman_id": "5fccae9d-5c27-4c4b-be28-75dd91c0f09d",
+		"name": "AGSRProject",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "7272779"
+	},
+	"item": [
+		{
+			"name": "GetAllPatients",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://localhost:44376/agsrproject/v1/patient/getallpatients"
+			},
+			"response": []
+		},
+		{
+			"name": "GetPatientById",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44376/agsrproject/v1/patient/getpatient?id=00afd4a7-e8fe-40f6-8117-f99b728482e0",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44376",
+					"path": [
+						"agsrproject",
+						"v1",
+						"patient",
+						"getpatient"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "00afd4a7-e8fe-40f6-8117-f99b728482e0"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AddPatient",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": {\r\n        \"id\": \"\",\r\n        \"use\": \"official\",\r\n        \"family\": \"Patient55\",\r\n        \"given\": [\r\n            \"Patient55\",\r\n            \"Patient55\"\r\n            ]\r\n        },\r\n        \"gender\": \"female\",\r\n        \"birthDate\": \"2009-12-04T01:57:11\",\r\n        \"active\": false\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://localhost:44376/agsrproject/v1/patient/addpatient"
+			},
+			"response": []
+		},
+		{
+			"name": "UpdatePatient",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": {\r\n        \"id\": \"00afd4a7-e8fe-40f6-8117-f99b728482e0\",\r\n        \"use\": \"official\",\r\n        \"family\": \"UpdatedPatient\",\r\n        \"given\": [\r\n            \"UpdatedPatient\",\r\n            \"UpdatedPatient\"\r\n            ]\r\n        },\r\n        \"gender\": \"female\",\r\n        \"birthDate\": \"2009-12-04T01:57:11\",\r\n        \"active\": false\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://localhost:44376/agsrproject/v1/patient/updatepatient"
+			},
+			"response": []
+		},
+		{
+			"name": "DeletePatient",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "https://localhost:44376/agsrproject/v1/patient/deletepatient?id=00afd4a7-e8fe-40f6-8117-f99b728482e0",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44376",
+					"path": [
+						"agsrproject",
+						"v1",
+						"patient",
+						"deletepatient"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "00afd4a7-e8fe-40f6-8117-f99b728482e0"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
