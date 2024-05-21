@@ -2,7 +2,7 @@
 	"info": {
 		"_postman_id": "5fccae9d-5c27-4c4b-be28-75dd91c0f09d",
 		"name": "AGSRProject",
-		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "7272779"
 	},
 	"item": [
@@ -28,7 +28,20 @@
 						}
 					}
 				},
-				"url": "https://localhost:44376/agsrproject/v1/patient/getallpatients"
+				"url": {
+					"raw": "https://localhost:44376/agsrproject/v1/patient/getallpatients",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44376",
+					"path": [
+						"agsrproject",
+						"v1",
+						"patient",
+						"getallpatients"
+					]
+				}
 			},
 			"response": []
 		},
@@ -36,7 +49,13 @@
 			"name": "GetPatientById",
 			"request": {
 				"method": "GET",
-				"header": [],
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
 				"url": {
 					"raw": "https://localhost:44376/agsrproject/v1/patient/getpatient?id=00afd4a7-e8fe-40f6-8117-f99b728482e0",
 					"protocol": "https",
@@ -74,7 +93,20 @@
 						}
 					}
 				},
-				"url": "https://localhost:44376/agsrproject/v1/patient/addpatient"
+				"url": {
+					"raw": "https://localhost:44376/agsrproject/v1/patient/addpatient",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44376",
+					"path": [
+						"agsrproject",
+						"v1",
+						"patient",
+						"addpatient"
+					]
+				}
 			},
 			"response": []
 		},
@@ -97,7 +129,20 @@
 						}
 					}
 				},
-				"url": "https://localhost:44376/agsrproject/v1/patient/updatepatient"
+				"url": {
+					"raw": "https://localhost:44376/agsrproject/v1/patient/updatepatient",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44376",
+					"path": [
+						"agsrproject",
+						"v1",
+						"patient",
+						"updatepatient"
+					]
+				}
 			},
 			"response": []
 		},
@@ -128,6 +173,210 @@
 						{
 							"key": "id",
 							"value": "00afd4a7-e8fe-40f6-8117-f99b728482e0"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetPatientsByBirthdate_1",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://localhost:44376/agsrproject/v1/patient/getpatientsbybirthdate?birthdate=eq2013-01-14",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44376",
+					"path": [
+						"agsrproject",
+						"v1",
+						"patient",
+						"getpatientsbybirthdate"
+					],
+					"query": [
+						{
+							"key": "birthdate",
+							"value": "eq2013-01-14"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetPatientsByBirthdate_2",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://localhost:44376/agsrproject/v1/patient/getpatientsbybirthdate?birthdate=ne2013-01-14",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44376",
+					"path": [
+						"agsrproject",
+						"v1",
+						"patient",
+						"getpatientsbybirthdate"
+					],
+					"query": [
+						{
+							"key": "birthdate",
+							"value": "ne2013-01-14"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetPatientsByBirthdate_3",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://localhost:44376/agsrproject/v1/patient/getpatientsbybirthdate?birthdate=lt2013-01-14",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44376",
+					"path": [
+						"agsrproject",
+						"v1",
+						"patient",
+						"getpatientsbybirthdate"
+					],
+					"query": [
+						{
+							"key": "birthdate",
+							"value": "lt2013-01-14"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetPatientsByBirthdate_4",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://localhost:44376/agsrproject/v1/patient/getpatientsbybirthdate?birthdate=gt2013-01-14",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44376",
+					"path": [
+						"agsrproject",
+						"v1",
+						"patient",
+						"getpatientsbybirthdate"
+					],
+					"query": [
+						{
+							"key": "birthdate",
+							"value": "gt2013-01-14"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetPatientsByBirthdate_5",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://localhost:44376/agsrproject/v1/patient/getpatientsbybirthdate?birthdate=ge2013-03-14",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44376",
+					"path": [
+						"agsrproject",
+						"v1",
+						"patient",
+						"getpatientsbybirthdate"
+					],
+					"query": [
+						{
+							"key": "birthdate",
+							"value": "ge2013-03-14"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetPatientsByBirthdate_6",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://localhost:44376/agsrproject/v1/patient/getpatientsbybirthdate?birthdate=le2013-03-14",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44376",
+					"path": [
+						"agsrproject",
+						"v1",
+						"patient",
+						"getpatientsbybirthdate"
+					],
+					"query": [
+						{
+							"key": "birthdate",
+							"value": "le2013-03-14"
 						}
 					]
 				}

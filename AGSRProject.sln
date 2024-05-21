@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 17
-VisualStudioVersion = 17.5.33424.131
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31424.327
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AGSRProject", "AGSRProject\AGSRProject.csproj", "{65838553-A159-4B03-BA03-0C4B285F5C40}"
 EndProject
@@ -11,7 +11,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AGSRProject.DataAccess", "A
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AGSRProject.BusinessLogic", "AGSRProject.BusinessLogic\AGSRProject.BusinessLogic.csproj", "{4E9CDDA9-102B-4B7C-8F60-7CB65F441D15}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AGSRProject.ConsoleApp", "AGSRProject.ConsoleApp\AGSRProject.ConsoleApp.csproj", "{6D0B1FAE-E458-4E57-945E-0CB7F1F2A163}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AGSRProject.ConsoleApp", "AGSRProject.ConsoleApp\AGSRProject.ConsoleApp.csproj", "{6D0B1FAE-E458-4E57-945E-0CB7F1F2A163}"
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{D1661A9B-7224-4443-B8F0-52BCAC791715}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{6D0B1FAE-E458-4E57-945E-0CB7F1F2A163}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6D0B1FAE-E458-4E57-945E-0CB7F1F2A163}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6D0B1FAE-E458-4E57-945E-0CB7F1F2A163}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D1661A9B-7224-4443-B8F0-52BCAC791715}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D1661A9B-7224-4443-B8F0-52BCAC791715}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D1661A9B-7224-4443-B8F0-52BCAC791715}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D1661A9B-7224-4443-B8F0-52BCAC791715}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
